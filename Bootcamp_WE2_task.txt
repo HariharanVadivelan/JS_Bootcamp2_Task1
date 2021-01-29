@@ -1,0 +1,153 @@
+print odd numbers in n array
+
+iife:
+(function(a)
+  {
+      var arr = [1,2,3,4,5];
+      for(var i = 0;i<a;i++)
+      {
+          if(arr[i]%2!==0)
+          {
+              console.log(arr[i]);
+          }
+      }
+      
+      
+  })(5)
+
+anonymous
+var odd = function(a)
+  {
+      var arr = [1,2,3,4,5];
+      for(var i = 0;i<a;i++)
+      {
+          if(arr[i]%2!==0)
+          {
+              console.log(arr[i]);
+          }
+      }
+      
+      
+  }
+  odd(5);
+
+convert string to title caps in string array
+
+(function(a)
+  {
+      var arr = ['apple','mango','lemon'];
+      for(var i = 0;i<3;i++)
+      {
+          arr[i] = arr[i][0].toUpperCase()+ arr[i].slice(1);
+      }
+      console.log(arr);
+      
+      
+  })(3);
+
+sum of all numbers in an array
+
+(function(a)
+  {
+      var arr = [2,4,6,8];
+      var sum = 0;
+      for(var i = 0;i<a;i++)
+      {
+          sum = sum + arr[i];
+      }
+      console.log(sum);
+      
+      
+  })(4);
+
+prime numbers in an array
+
+var prime = function(a){
+    var arr =[1,2,3,5,7];
+    
+    for(var i = 0;i<arr.length;i++)
+    {
+        var prime = true;
+        if(arr[i]===0 || arr[i] === 1)
+        {
+            prime = false;
+        }
+        else
+        {
+            for(var j = 2;j<arr[i];j++){
+            if(arr[i]%j===0)
+            {
+                prime = false;
+            }
+            
+        }
+        }
+         if(prime === true)
+    {
+        console.log(arr[i]);
+    }
+    
+    }
+}
+prime(5);
+
+
+palindrome in an array
+
+(function(a)
+{
+    var arr = ['madam','person','dood'];
+    var arr2=[];
+    for(var i = 0;i<arr.length;i++)
+    {
+        var temp = arr[i];
+        var temp1 = "";
+        for(var j = temp.length-1;j>=0;j--)
+        {
+        
+        temp1 = temp1 + temp[j];
+        
+        }
+        
+        arr2[i] = temp1; 
+        if(arr[i]===arr2[i])
+        {
+            console.log(arr[i]);
+        }
+        
+    }
+
+    
+})
+(3)
+
+remove duplicate elements in an array
+
+var str = ['Apple','Guava','Apple','Mango','Apple','Mango'];
+(function(a){
+for(var i = 0;i<str.length;i++)
+{
+    for(var j = i+1;j<str.length;j++)
+    {
+        if(str[i]===str[j])
+        {
+            str[i]= null;
+        }
+    }
+    
+    
+}
+
+var res = str.filter((ele)=>
+{
+    return ele!== null;
+    
+})
+console.log(res);
+})(5)
+
+Output:
+
+[ 'Guava', 'Apple', 'Mango' ]
+
+
